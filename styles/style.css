@@ -1,0 +1,43 @@
+/* === General Styling === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(40, 40, 40);
+}
+
+.container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.container:hover .slider {
+    animation-play-state: paused;
+}
+
+.slider {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.slider a img {
+    height: 70vh;
+    width: 20em;
+    object-fit: cover;
+    filter: grayscale(80%);
+}
+
+.slider a img:hover {
+    filter: grayscale(0%);
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}
