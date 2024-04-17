@@ -1,9 +1,16 @@
+/* === Fonts === */
+@font-face {
+    font-family: Josefin;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     list-style: none;
+    font-family: Josefin;
 }
 
 :root {
@@ -13,8 +20,17 @@
     --cardMargin: 4vw;
 }
 
-.capsLock {
-    text-transform: uppercase;
+h2 {
+    font-weight: 900;
+}
+
+h3 {
+    font-weight: 500;
+    margin-bottom: 1em
+}
+
+p {
+    max-width: 60ch;
 }
 
 #cards {
@@ -24,6 +40,29 @@
     gap: var(--cardMargin);
     padding-bottom: calc(var(--cards) * var(--cardTopPadding));
     margin-bottom: var(--cardMargin);
+}
+
+.card {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.card-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.card-child img {
+    width: 60%;
+    height: 80%;
+    object-fit: cover;
 }
 
 #card1 {
@@ -49,31 +88,4 @@
 #card5 {
     background: rgb(80, 80, 80);
     z-index: 5;
-}
-
-#card6 {
-    background: rgb(40, 40, 40);
-    z-index: 6;
-}
-
-.card {
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    position: sticky;
-    top: 0;
-}
-
-.card-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-}
-
-.card-body img {
-    width: 60%;
-    height: 80%;
-    object-fit: cover;
 }
