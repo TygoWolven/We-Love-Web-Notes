@@ -13,23 +13,8 @@
     --cardMargin: 4vw;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.primary-navigation {
-    position: fixed;
-    background: white;
-    z-index: 10;
-}
-
-.navigation {
-    display: flex;
-}
-
-.navigation li {
-    padding: 1em;
+.capsLock {
+    text-transform: uppercase;
 }
 
 #cards {
@@ -42,32 +27,32 @@ a {
 }
 
 #card1 {
-    background: red;
+    background: rgb(240, 240, 240);
     z-index: 1;
 }
 
 #card2 {
-    background: blue;
+    background: rgb(200, 200, 200);
     z-index: 2;
 }
 
 #card3 {
-    background: green;
+    background: rgb(160, 160, 160);
     z-index: 3;
 }
 
 #card4 {
-    background: yellow;
+    background: rgb(120, 120, 120);
     z-index: 4;
 }
 
 #card5 {
-    background: pink;
+    background: rgb(80, 80, 80);
     z-index: 5;
 }
 
 #card6 {
-    background: orange;
+    background: rgb(40, 40, 40);
     z-index: 6;
 }
 
@@ -76,8 +61,19 @@ a {
     height: 100vh;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
     position: sticky;
     top: 0;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.card-body img {
+    width: 60%;
+    height: 80%;
+    object-fit: cover;
 }
